@@ -13,11 +13,31 @@ const perguntas = [
         ]
     },
     {
-        enunciado: "Pergunta 2",
+        enunciado: "Os prejudicados pela enchente estão recebendo o apoio necesário?",
         alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
+            "Sim, já estão recebendo apoio ",
+            "Não, ainda não é o suficiente"
+        ]
+    }
+    {
+        enunciado: "Todos conseguiram um abrigo seguro para ficar durante as enchentes?",
+        alternativas: [
+            "Todos coneguiram",
+            "Não foi todos que conseguiram"
+        ]
+    },
+    {
+        enunciado: "Você acha que as doações foram o suficiente para as pessoas se reerguerem?",
+        alternativas: [
+            "Foram o suficiente",
+            "Não foram o suficiente"
         ]
     }
 ]; 
-
+let atual = 0;
+let perguntaAtual;
+function mostraPergunta() {
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+}
+mostraPergunta()
